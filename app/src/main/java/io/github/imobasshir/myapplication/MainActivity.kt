@@ -21,20 +21,13 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    BirthdayGreetingWithImage(
-                        message = getString(R.string.happy_birthday_text),
-                        from = getString(R.string.signature_text)
+                    Article(
+                        head = getString(R.string.article_heading),
+                        first = getString(R.string.article_first),
+                        second = getString(R.string.article_second)
                     )
                 }
             }
         }
-    }
-}
-
-@Preview(showBackground = false)
-@Composable
-fun BirthdayCardPreview() {
-    MyApplicationTheme {
-        BirthdayGreetingWithImage(message = "Happy Birthday Mobasshir!", from = " - from Ibrahim")
     }
 }

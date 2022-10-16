@@ -3,8 +3,8 @@ package io.github.imobasshir.myapplication
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
@@ -12,7 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import io.github.imobasshir.myapplication.ui.theme.MyApplicationTheme
 
 class MainActivity : ComponentActivity() {
@@ -25,7 +25,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    Greeting("Mobasshir Imam")
+                    BirthdayGreetingWithText(message = "Happy Birthday Mobasshir!" , from = "from Ibrahim")
                 }
             }
         }
@@ -33,16 +33,25 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(name: String) {
-    Surface(color = Color.Green, modifier = Modifier.padding(16.dp)) {
-        Text(text = "Hello my name is $name!", modifier = Modifier.padding(16.dp))
+fun BirthdayGreetingWithText(message: String, from: String) {
+    Surface(color = Color.Cyan) {
+        Column {
+            Text(
+                text = message,
+                fontSize = 30.sp
+            )
+            Text(
+                text = from,
+                fontSize = 20.sp
+            )
+        }
     }
 }
 
 @Preview(showBackground = true)
 @Composable
-fun DefaultPreview() {
+fun BirthdayCardPreview() {
     MyApplicationTheme {
-        Greeting("Mobasshir Imam")
+        BirthdayGreetingWithText(message = "Happy Birthday Mobasshir!" , from = " - from Ibrahim")
     }
 }

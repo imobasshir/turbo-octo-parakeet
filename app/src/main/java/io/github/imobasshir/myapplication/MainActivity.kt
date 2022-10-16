@@ -21,7 +21,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    TaskComplete()
+                    QuadrantCompose()
                 }
             }
         }
@@ -53,5 +53,13 @@ fun BirthdayCardPreview() {
 fun TaskCompletePreview() {
     MyApplicationTheme {
         TaskComplete()
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun QuadrantComposePreview() {
+    MyApplicationTheme {
+        QuadrantCompose()
     }
 }

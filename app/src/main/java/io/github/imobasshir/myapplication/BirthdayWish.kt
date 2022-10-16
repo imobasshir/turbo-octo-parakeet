@@ -44,10 +44,10 @@ fun BirthdayGreetingWithImage(message: String, from: String) {
     }
 }
 
-@Preview(showBackground = false)
-@Composable
-fun BirthdayCardPreview() {
-    MyApplicationTheme {
-        BirthdayGreetingWithImage(message = "Happy Birthday Mobasshir!", from = " - from Ibrahim")
-    }
-}
+//@Preview(showBackground = false)
+//@Composable
+//fun BirthdayCardPreview() {
+//    MyApplicationTheme {
+//        BirthdayGreetingWithImage(message = "Happy Birthday Mobasshir!", from = " - from Ibrahim")
+//    }
+//}

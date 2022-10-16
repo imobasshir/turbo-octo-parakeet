@@ -21,11 +21,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    Article(
-                        head = getString(R.string.article_heading),
-                        first = getString(R.string.article_first),
-                        second = getString(R.string.article_second)
-                    )
+                    TaskComplete()
                 }
             }
         }
@@ -49,5 +45,13 @@ fun ArticleComposerPreview() {
 fun BirthdayCardPreview() {
     MyApplicationTheme {
         BirthdayGreetingWithImage(message = "Happy Birthday Mobasshir!", from = " - from Ibrahim")
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun TaskCompletePreview() {
+    MyApplicationTheme {
+        TaskComplete()
     }
 }

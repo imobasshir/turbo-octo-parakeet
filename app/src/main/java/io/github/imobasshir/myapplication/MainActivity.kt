@@ -4,10 +4,10 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import io.github.imobasshir.myapplication.ui.theme.MyApplicationTheme
 
@@ -19,10 +19,10 @@ class MainActivity : ComponentActivity() {
                 // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier .fillMaxSize(),
-//                    color = MaterialTheme.colors.background
-                    color = Color(0xff003a4a)
+                    color = MaterialTheme.colors.background
+//                    color = Color(0xff003a4a)
                 ) {
-                    Card()
+                    LemonApp()
                 }
             }
         }
@@ -65,10 +65,26 @@ fun QuadrantComposePreview() {
     }
 }
 
-@Preview(showBackground = true)
+@Preview(showBackground = false)
 @Composable
 fun CardPreview() {
     MyApplicationTheme {
         Card()
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun DiceRollerAppPreview() {
+    MyApplicationTheme {
+        DiceWithButtonAndImage()
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun LemonAppPreview() {
+    MyApplicationTheme {
+        LemonApp()
     }
 }

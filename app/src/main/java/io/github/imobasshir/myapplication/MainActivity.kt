@@ -22,7 +22,7 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colors.background
 //                    color = Color(0xff003a4a)
                 ) {
-                    LemonApp()
+                    TipCalculatorCustom()
                 }
             }
         }
@@ -86,5 +86,21 @@ fun DiceRollerAppPreview() {
 fun LemonAppPreview() {
     MyApplicationTheme {
         LemonApp()
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun TipCalculatorPreview() {
+    MyApplicationTheme {
+        TipCalculator()
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun TipCalculatorCustomPreview() {
+    MyApplicationTheme {
+        TipCalculatorCustom()
     }
 }

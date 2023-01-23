@@ -104,3 +104,11 @@ fun TipCalculatorCustomPreview() {
         TipCalculatorCustom()
     }
 }
+
+@Preview(showBackground = false)
+@Composable
+private fun MaterialDesignUsePreviewMain() {
+    MyApplicationTheme {
+        MaterialDesignUse()
+    }
+}

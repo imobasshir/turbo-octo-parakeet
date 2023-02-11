@@ -36,7 +36,9 @@ fun StateManagementInCompose() {
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             /* it will work for the first time only or before orientation or page is not changed
+            or before the app is not killed or app is not recomposed
             val count = remember { mutableStateOf(0) } */
+
             /* it will work for all the time irrespective of page orientation of screen */
             val count = rememberSaveable { mutableStateOf(0) }
             Button(onClick = { count.value++ }) {

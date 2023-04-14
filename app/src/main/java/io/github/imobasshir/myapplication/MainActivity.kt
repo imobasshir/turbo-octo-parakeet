@@ -22,7 +22,7 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colors.background
 //                    color = Color(0xff003a4a)
                 ) {
-                    TipCalculatorCustom()
+                    MaterialDesignUse()
                 }
             }
         }

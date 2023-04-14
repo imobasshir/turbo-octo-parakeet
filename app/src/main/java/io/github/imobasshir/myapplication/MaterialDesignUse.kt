@@ -50,8 +50,6 @@ fun MaterialDesignUse() {
                 TopAppBar(
                     title = { Text("Material Design Use") },
                     elevation = 0.dp,
-                    backgroundColor = Color.Magenta,
-                    contentColor = Color.White,
                     navigationIcon = {
                         IconButton(
                             onClick = { scope.launch { scaffoldState.drawerState.open() } },
@@ -72,8 +70,6 @@ fun MaterialDesignUse() {
                         Text("Bottom Bar")
                     },
                     elevation = 0.dp,
-                    backgroundColor = Color.Magenta,
-                    contentColor = Color.White,
                     cutoutShape = MaterialTheme.shapes.small.copy(
                         CornerSize(percent = 50)
                     )
@@ -123,10 +119,6 @@ fun MaterialDesignUse() {
                             top = 12.dp,
                             end = 20.dp,
                             bottom = 12.dp
-                        ),
-                        colors = ButtonDefaults.buttonColors(
-                            backgroundColor = Color.Blue,
-                            contentColor = Color.White
                         )
                     ) {
                         Icon(
